@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript">
+    function check {} {
+        var xelem = document.getElementById('g1');
+     if (xelem.checked) {
+         alert('Good job!')
+     }
+     else {
+         alert("Try next time!")
+     }
+     var g3elem =  document.getElementById('g3');
+     var reselem = document.getElementById('res');
+     reselem.innerHTML = 'Are you sure' + g3elem value + '?';
+    } 
+    </script>
+<head>
+    <meta charset=UTF-8 " />
+    <title>Spain</title>
+    <link href="./css/stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+        <div id="top_bar"> 
+            <div id="top_header">
+                <div class="logo"> Spain </div>  
+                <div id="nav_block"> 
+                    <div class="nav_button"><a href="./index.html"> Home </a></div>
+                    <div class="nav_button"><a href="./about.html"> About </a></div>
+                    <div class="nav_button"><a href="./quiz.html"> Quick Quiz </a></div>
+                    <div class="nav_button"><a href="./map.html"> Maps </a></div>
+                    <div class="nav_button"> Sign in </div>
+                </div>
+            </div>
+        </div>
+        <div id="content_container">
+          <div id="header"> 
+            <div class="header_content_mainline">   
+             <div class="Quick Quiz">
+<div id="question">What is the capital of Spain?</div>
+<div id="answers">
+    <input type="radio" name="answer" value="1" checked>Milan<br>
+    <input type="radio" name="answer" value="2" checked>Madrid<br>
+    <input type="radio" name="answer" value="3" checked>Barcelona<br>
+    <input type="radio" name="answer" value="4" checked>Rome<br>
+</div>
+<input type="button" onclick="changeQuest()" value="Submit" id="nextbutton">
+</div>
+</body>
+</html>
