@@ -5,7 +5,7 @@ body {
 	background-attachment: scroll;
 	background-repeat: repeat-x;
 	background-position: left top;
-    background: url(../assets/bc.jpg);
+    background: url(../assets/bcn.jpg);
 }
 
 #content_container {
@@ -33,7 +33,7 @@ body {
 }
 
 .logo {
-	color: white;
+	color: coral;
     padding: 10px;
     text-align: center;
     font-size: 65px;
@@ -46,7 +46,7 @@ body {
 #top_bar {
 	width:100%;
 	height:90px;
-	background-color:sandybrown;
+	background-color:lightgoldenrodyellow;
 }
 
 #nav_block {
@@ -84,8 +84,8 @@ body {
 
 .header_content_mainline {
 	font-size:30px;
-	color:floralwhite;
+	color:coral;
 	width:700px;
 	font-style: italic;
-    text-align: center;
+	margin-left: 150px;
 }
