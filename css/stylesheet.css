@@ -2,9 +2,13 @@
 body {
 	margin:0px;
 	padding:0px;
-	background-attachment: scroll;
-	background-repeat: repeat-x;
-	background-position: left top;
+	background-color: lightgoldenrodyellow;
+}
+
+.body_background {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
     background: url(../assets/bcn.jpg);
 }
 
@@ -13,7 +17,7 @@ body {
 	margin-right:auto;
 	width:900px;
 	height: 750px;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: right center;
 }
@@ -88,4 +92,18 @@ body {
 	width:700px;
 	font-style: italic;
 	margin-left: 150px;
+	text-align: center;
+}
+
+#content_container_2 {
+	font-size:20px;
+	color:coral;
+	font-style: italic;
+	text-align: left;
+	width:900px;
+	height: 750px;
+	background-color: lightgoldenrodyellow;
+	margin-left: 150px;
+	margin-top: 40px;
+	background-position: right center;
 }

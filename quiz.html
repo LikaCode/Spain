@@ -1,38 +1,63 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Spain</title>
-        <link href="./css/stylesheet.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="./scripts/quiz.js"></script>
-    </head>
-    <body>
-        <div id="top_bar"> 
-            <div id="top_header">
-                <div class="logo"> Spain </div>  
-                <div id="nav_block"> 
-                    <div class="nav_button"><a href="./index.html"> Home </a></div>
-                    <div class="nav_button"><a href="./about.html"> About </a></div>
-                    <div class="nav_button"><a href="./quiz.html"> Quick Quiz </a></div>
-                    <div class="nav_button"><a href="./map.html"> Maps </a></div>
-                </div>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Spain</title>
+    <link href="./css/stylesheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="./scripts/quiz.js"></script>
+</head>
+
+<body>
+    <div id="top_bar">
+        <div id="top_header">
+            <div class="logo"> Spain </div>
+            <div id="nav_block">
+                <div class="nav_button"><a href="./index.html"> Home </a></div>
+                <div class="nav_button"><a href="./about.html"> About </a></div>
+                <div class="nav_button"><a href="./quiz.html"> Quick Quiz </a></div>
+                <div class="nav_button"><a href="./map.html"> Maps </a></div>
             </div>
         </div>
-        <div id="content_container">
-            <div id="header"> 
-            <div class="header_content_mainline">   
-                <div class="Quick Quiz">
-                    <div id="question">What is the capital of Spain?</div>
-                    <div id="answers">
-                        <input type="radio" name="answer" value="1" checked>Milan<br>
-                        <input type="radio" name="answer" value="2" checked>Madrid<br>
-                        <input type="radio" name="answer" value="3" checked>Barcelona<br>
-                        <input type="radio" name="answer" value="4" checked>Rome<br>
-                    </div>
-                    <input type="button" onclick="changeQuest()" value="Submit" id="nextbutton">
-                </div>
-            </div>
-            </div>
-        </div>
-    </body>
+    </div>
+
+<center><b>Let's check your knowlegde about Spain!</b></center><br/><br/>
+&nbsp;&nbsp;&nbsp;<span style="color:#006699;text-decoration:underline;cursor:pointer;" onclick="document.getElementById('instruction').style.display = showhide(document.getElementById('instruction').style.display)">
+Instructions</span>
+ <br/>
+<div id="instruction" style="display: none; width: 100%;">
+<ul>
+<li>Выберите один из вариантов в каждом из 3 вопросов;</li>
+<li>Нажмите на кнопку "Показать результат";</li>
+<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
+<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
+<li>За каждый правильный ответ начисляется 1 балл;</li>
+<li>Оценки: менее 1.5 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 1.5 но менее 2.25 - УДОВЛЕТВОРИТЕЛЬНО, 2.25 и менее 3 - ХОРОШО, 3 - ОТЛИЧНО;</li>
+<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
+</ul>
+</div>
+<form name="test"><ol>
+<li><INPUT type="text" size="1" value="" name="T1"/><b> What is the capital of Spain?</b><br/>
+<input type="radio" value="0" name="Q1"/> Madrid<br />
+<input type="radio" value="1" name="Q1"/> Barcelona<br />
+<input type="radio" value="2" name="Q1"/> Milan<br />
+<input type="radio" value="3" name="Q1"/> London<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T2"/><b> When was the country founded?</b><br/>
+<input type="radio" value="0" name="Q2"/> 1497<br />
+<input type="radio" value="1" name="Q2"/> 1492<br />
+<input type="radio" value="2" name="Q2"/> 1484<br />
+<input type="radio" value="3" name="Q2"/> 1478<br />
+<br/></li><li><INPUT type="text" size="1" value="" name="T3"/><b> What football club is the current champion of La Liga?</b><br/>
+<input type="radio" value="0" name="Q3"/> FC Barcelona<br />
+<input type="radio" value="1" name="Q3"/> Sevilla<br />
+<input type="radio" value="2" name="Q3"/> Malaga<br />
+<input type="radio" value="3" name="Q3"/> Atletico Madrid<br />
+<br/></li></ol>      
+<CENTER>
+<P><TEXTAREA name="s1" rows="4" cols="70" readonly> </TEXTAREA> </P>
+<INPUT onclick="check_me()" type="button" value="Show the result"/>&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT type="reset" value="Clear"/> 
+</CENTER>        
+</form> 
+</body>
 </html>
