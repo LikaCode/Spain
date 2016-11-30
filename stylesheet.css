@@ -9,7 +9,7 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
-    background: url(../assets/bcn.jpg);
+    background: url(./bcn.jpg);
 }
 
 #content_container {
