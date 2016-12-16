@@ -6,10 +6,11 @@ body {
 }
 
 .body_background {
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center;
-    background: url(./bcn.jpg);
+	background: url(./bcn.jpg);
+	background-size: 100% 100%;
+	//background-attachment: fixed;
+	//background-repeat: no-repeat;
+	//background-position: center;
 }
 
 #content_container {
