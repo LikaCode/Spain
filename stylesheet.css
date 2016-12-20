@@ -108,3 +108,13 @@ body {
 	margin-top: 40px;
 	background-position: right center;
 }
+#footer {
+	font-size: 15px;
+	color: lightyellow;
+	text-align: left;
+	width: 100%;
+	height: 20px;
+	margin-bottom: 1px;
+	float: left;
+	background-color: lightsalmon;
+}
