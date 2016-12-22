@@ -108,6 +108,7 @@ body {
 	margin-top: 40px;
 	background-position: right center;
 }
+
 #footer {
 	font-size: 15px;
 	color: lightyellow;
@@ -117,4 +118,42 @@ body {
 	margin-bottom: 1px;
 	float: left;
 	background-color: lightsalmon;
+}
+
+.myButton {
+		display: inline-block;
+  		width: 170px;
+  		height: 70px;
+  		line-height: 50px;
+  		font-size: 30px;
+  		text-align: center;
+  		text-decoration: none;
+  		
+  		outline: none;
+  		border: none;
+  		border-radius: 10px;
+  		background: darksalmon;
+  		box-shadow: inset rgba(0,0,0,.6) 0 -2px 5px, inset rgba(252,255,255,.7) 0 2px 5px, rgba(0,0,0,.8) 0 2px 5px -1px;
+  		color: #3f1314;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+       		font: 15pt "Comic Sans MS", cursive, sans-serif;
+		cursor: pointer;
+  		user-select: none;
+	  }
+
+.restart {    
+		color: coral; 
+		text-decoration: none;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+       		font: 20pt "Comic Sans MS", cursive, sans-serif;
+	 }
+
+.wrapper {
+	 	width: 700px;
+		height: 250px;
+		margin: 0 auto;
+		display: none;
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
 }

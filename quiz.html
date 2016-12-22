@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Spain</title>
+    <link rel="shortcut icon" href="./Favicon.png" type="image/png">
     <link href="./stylesheet.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="./quiz.js"></script>
 </head>
@@ -20,44 +21,22 @@
             </div>
         </div>
     </div>
-
-<center><b>Let's check your knowlegde about Spain!</b></center><br/><br/>
-&nbsp;&nbsp;&nbsp;<span style="color:#006699;text-decoration:underline;cursor:pointer;" onclick="document.getElementById('instruction').style.display = showhide(document.getElementById('instruction').style.display)">
-Instructions</span>
- <br/>
-<div id="instruction" style="display: none; width: 100%;">
-<ul>
-<li>Выберите один из вариантов в каждом из 3 вопросов;</li>
-<li>Нажмите на кнопку "Показать результат";</li>
-<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
-<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
-<li>За каждый правильный ответ начисляется 1 балл;</li>
-<li>Оценки: менее 1.5 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 1.5 но менее 2.25 - УДОВЛЕТВОРИТЕЛЬНО, 2.25 и менее 3 - ХОРОШО, 3 - ОТЛИЧНО;</li>
-<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
-</ul>
-</div>
-<form name="test"><ol>
-<li><INPUT type="text" size="1" value="" name="T1"/><b> What is the capital of Spain?</b><br/>
-<input type="radio" value="0" name="Q1"/> Madrid<br />
-<input type="radio" value="1" name="Q1"/> Barcelona<br />
-<input type="radio" value="2" name="Q1"/> Milan<br />
-<input type="radio" value="3" name="Q1"/> London<br />
-<br/></li><li><INPUT type="text" size="1" value="" name="T2"/><b> When was the country founded?</b><br/>
-<input type="radio" value="0" name="Q2"/> 1497<br />
-<input type="radio" value="1" name="Q2"/> 1492<br />
-<input type="radio" value="2" name="Q2"/> 1484<br />
-<input type="radio" value="3" name="Q2"/> 1478<br />
-<br/></li><li><INPUT type="text" size="1" value="" name="T3"/><b> What football club is the current champion of La Liga?</b><br/>
-<input type="radio" value="0" name="Q3"/> FC Barcelona<br />
-<input type="radio" value="1" name="Q3"/> Sevilla<br />
-<input type="radio" value="2" name="Q3"/> Malaga<br />
-<input type="radio" value="3" name="Q3"/> Atletico Madrid<br />
-<br/></li></ol>      
-<CENTER>
-<P><TEXTAREA name="s1" rows="4" cols="70" readonly> </TEXTAREA> </P>
-<INPUT onclick="check_me()" type="button" value="Show the result"/>&nbsp;&nbsp;&nbsp;&nbsp; 
-<INPUT type="reset" value="Clear"/> 
-</CENTER>        
-</form> 
+    <h1 style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 30px; color: coral; text-align: center;" >So now let's check your knowledge about this country! :)</h1>
+	<div style="margin-top: 270px;">
+		<div id="area" class="wrapper">
+			<center>			
+				<p style="font-size: 38px;font-weight: bold;padding-top: 2px;color: coral;" id="question"></p>
+				<button onclick="check(0)" class="myButton" id="option1"></button>
+				<button onclick="check(1)" class="myButton" id="option2"></button>
+				<button onclick="check(2)" class="myButton" id="option3"></button>
+				<button onclick="check(3)" class="myButton" id="option4"></button>
+			</center>
+		</div>
+	</div>	
+	<br/>
+	<br><center>
+		<button id="start" class="myButton" onclick="check(4)"><p style="font-family: "Comic Sans MS", cursive, sans-serif;">Let's begin!</p></button>
+		<script type="text/javascript"> var curent_url = document.URL; document.write("<a id='end' style='display: none;' class='restart' href='" + curent_url + "'><b><b><strong>Go again!</strong></b></b></a>"); </script>	
+	</center>
 </body>
 </html>

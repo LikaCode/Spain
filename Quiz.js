@@ -1,57 +1,49 @@
- var res="121"; 
-function check_me()
-{
-    var count=0;
-    with(document.test) {
-if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked)  
-{count+=1};  
-if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked)  
-{count+=1};  
-if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked)  
-{count+=1};  
-if (count>0) alert("Not all the questions were answered. Please check yourself!")    
-        else answer();
-    }
-} 
- 
-function control(k, f1,f2,f3) {
-if (k==1&&f1.checked) return true;
-if (k==2&&f2.checked) return true;
-if (k==3&&f3.checked) return true;
-return false;
-}
-
-function answer() {
-answ="";
-     with(document)    {
-    answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0";
-answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0";
-answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0";
-
-showResult();
-    }
-}
- 
-function showResult()   {
-    var nok=0;
-    var i,s;
- 
-for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
-if(nok==3) s="ОТЛИЧНО";
-if(nok<3) s="ХОРОШО";
-if(nok<2.25) s="УДОВЛЕТВОРИТЕЛЬНО";
-if (nok<1.5) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
-    document.test.s1.
-    value="Количество правильных ответов "+nok+". Ваша оценка "+s+". Посмотрите на окно рядом с номером вопроса. Если ответ правильный, там (+). Если ответ ошибочен, там (-).";
- 
-with(document.test)
-    {
-    if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
-   if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
-   if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
-     }
-}
-function showhide(obj){
-    if(obj == 'none') return 'inline';
-    else return 'none';
-}
+var countQuest = 0;
+	var plus = 0;
+	var test_start = 0;
+	function check(num){
+		if(num == 4){ 
+			document.getElementById('area').style.display='block'; 
+			document.getElementById('start').style.display='none';
+			document.getElementById('end').style.display='inline';
+			if(test_start == 0){
+				var questions = ["What is the capital of Spain?",
+				"When was the country founded?","What football club is the current champion of La Liga?",
+				"For what period of time the Spanish national football team topped the FIFA World rankings?"];
+				var number1 = ["Madrid","1497","Malaga","2008-2012"];	
+				var number2 = ["Barcelona","1492","Sevilla","2009-2013"];	
+				var number3 = ["Milan","1484","FC Barcelona","2009-2012"];	
+				var number4 = ["London","1478","Atletico Madrid","2008-2013"]
+				document.getElementById('question').innerHTML=questions[countQuest];
+				document.getElementById('option1').innerHTML=number1[countQuest];
+				document.getElementById('option2').innerHTML=number2[countQuest];
+				document.getElementById('option3').innerHTML=number3[countQuest];
+				document.getElementById('option4').innerHTML=number4[countQuest];
+				var answer = [0,1,2,3];
+				test_start = 1;	
+			}
+		}
+		else{
+				var questions = ["What is the capital of Spain?",
+				"When was the country founded?","What football club is the current champion of La Liga?",
+				"For what period of time the Spanish national football team topped the FIFA World rankings?"];
+				var number1 = ["Madrid","1497","Malaga","2008-2012"];	
+				var number2 = ["Barcelona","1492","Sevilla","2009-2013"];	
+				var number3 = ["Milan","1484","FC Barcelona","2009-2012"];	
+				var number4 = ["London","1478","Atletico Madrid","2008-2013"];
+			var answer = [0,1,2,3];
+			if(num == answer[countQuest]) plus++;
+			if(questions.length - 1> countQuest){
+				countQuest++;
+				document.getElementById('question').innerHTML=questions[countQuest];
+				document.getElementById('option1').innerHTML=number1[countQuest];
+				document.getElementById('option2').innerHTML=number2[countQuest];
+				document.getElementById('option3').innerHTML=number3[countQuest];
+				document.getElementById('option4').innerHTML=number4[countQuest];
+			}
+			else{ 
+				document.getElementById('area').style.display='none';
+				alert('You have ' + plus + ' right answers');
+			}
+		}
+	}
